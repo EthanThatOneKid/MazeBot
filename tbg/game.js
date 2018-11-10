@@ -9,6 +9,7 @@ function Game() {
   this.score = 0;
   this.currentRoom = {};
   this.keyWords = ['help', 'info', 'inventory', 'score', 'save', 'restore', 'throw', 'drop', 'take', 'pick', 'get', 'use', 'move', 'nothing'];
+  this.channel;
 }
 
 Game.prototype.play = function(gsPath) { //Game Script Path
@@ -16,6 +17,10 @@ Game.prototype.play = function(gsPath) { //Game Script Path
   this.rooms = script.rooms;
   this.kickOff(script.name, script.meta);
 };
+
+Game.prototype.setChannel = function(channel) {
+  this.channel = channel;
+}
 
 Game.prototype.help = function() {
   console.log('\n', c.blue('  This is text based adventure game inspired by Zork. You can find a set of commands below that will help you navigate around the game.', '\n'));
@@ -179,14 +184,13 @@ Game.prototype.prompt = function(text, callback) {
     message: text ? text : 'The Room description is empty :('
   };
   console.log('\n');
-  inquirer.prompt([p]).then(callback);
+  console.log(p.message);
+  // inquirer.prompt([p]).then(callback);
 };
 
 Game.prototype.processKeyword = function(response, room, _r) {
   var self = this;
-  if (response == 'help') {
-    self.help();
-  } else if (response == 'info') {
+  if (response == 'info') {
     console.log(_r.contextualHelp || _r.description);
   } else if (response == 'inventory') {
     self.printInventory();
