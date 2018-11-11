@@ -16,20 +16,20 @@ module.exports = {
     cyan: chalk.cyan
   },
   tableChars: {
-    'top': '═',
-    'top-mid': '╤',
-    'top-left': '╔',
-    'top-right': '╗',
-    'bottom': '═',
-    'bottom-mid': '╧',
-    'bottom-left': '╚',
-    'bottom-right': '╝',
-    'left': '║',
-    'left-mid': '╟',
+    'top': '_',
+    'top-mid': '+',
+    'top-left': '+',
+    'top-right': '+',
+    'bottom': '_',
+    'bottom-mid': '+',
+    'bottom-left': '+',
+    'bottom-right': '+',
+    'left': '|',
+    'left-mid': '|',
     'mid': '─',
-    'mid-mid': '┼',
-    'right': '║',
-    'right-mid': '╢',
+    'mid-mid': '|',
+    'right': '|',
+    'right-mid': '|',
     'middle': '│'
   }
 };
