@@ -1,10 +1,11 @@
 let game_data;
 let cy;
-
 const cy_els = [];
 
+const data_url = "https://raw.githubusercontent.com/EthanThatOneKid/MazeBot/master/tbg/game_data.json";
+
 (async () => {
-  const response = await fetch("../tbg/game_data.json");
+  const response = await fetch(data_url);
   game_data = await response.json();
   for (let room_data of game_data.rooms) {
     const [id, room] = Object.entries(room_data)[0];
@@ -21,75 +22,15 @@ const cy_els = [];
       });
     }
   }
+
   cy = cytoscape({
     container: document.querySelector("#cy-container"),
     elements: cy_els,
-    style: [ // the stylesheet for the graph
+    style: [
       {selector: 'node', style: {'background-color': '#666', 'label': 'data(alias)'}},
       {selector: 'edge', style: {'width': 3, 'line-color': '#ccc', 'target-arrow-color': '#ccc', 'target-arrow-shape': 'triangle'}}
     ],
-    layout: {name: 'grid', rows: 1}
+    layout: {name: 'breadthfirst'}
   });
 
 })();
-
-// var cy = cytoscape({
-//         container: document.getElementById('cy-container'),
-//         style: [
-//     {
-//         selector: 'node',
-//         style: {
-//             shape: 'hexagon',
-//             'background-color': 'red',
-//             label: 'data(id)'
-//         }
-//     }],
-//     layout: {
-//     name: 'grid'
-// },
-//         elements: [
-//   // nodes
-//   { data: { id: 'a' } },
-//   { data: { id: 'b' } },
-//   { data: { id: 'c' } },
-//   { data: { id: 'd' } },
-//   { data: { id: 'e' } },
-//   { data: { id: 'f' } },
-//   // edges
-//   {
-//     data: {
-//       id: 'ab',
-//       source: 'a',
-//       target: 'b'
-//     }
-//   },
-//   {
-//     data: {
-//       id: 'cd',
-//       source: 'c',
-//       target: 'd'
-//     }
-//   },
-//   {
-//     data: {
-//       id: 'ef',
-//       source: 'e',
-//       target: 'f'
-//     }
-//   },
-//   {
-//     data: {
-//       id: 'ac',
-//       source: 'a',
-//       target: 'd'
-//     }
-//   },
-//   {
-//     data: {
-//       id: 'be',
-//       source: 'b',
-//       target: 'e'
-//     }
-//   }
-// ]
-//       });

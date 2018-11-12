@@ -26,7 +26,6 @@
   "dependencies": {
     "chalk": "^2.4.1",
     "cli-table": "^0.3.1",
-    "cytoscape": "^3.2.20",
     "discord.js": "^11.4.2",
     "dotenv": "^6.1.0",
     "inquirer": "^6.2.0",
