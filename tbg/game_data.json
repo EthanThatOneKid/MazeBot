@@ -1,10 +1,10 @@
 {
-  "name": "Super Maze",
+  "name": "MazeBot",
   "meta": {
-    "author": "Anurag Jain & Arvind Ravulavaru",
-    "email": " *anurag91jain@gmail.com & arvind.ravulavaru@gmail.com",
-    "tagline": "A Simple Text based Adventure game written in Javascript",
-    "welcome": "Welcome to Maya - A pilot written to test the text based adventure game engine written in Javascript. The aim of the game is to find the exit gate and leave the maze."
+    "author": "EthanThatOneKid",
+    "email": " ethan.r.davidson@gmail.com",
+    "tagline": "A Text based Adventure Game written in Javascript for Discord",
+    "welcome": "Welcome to MazeBot - The aim of the game is to find the exit gate and leave the maze."
   },
   "rooms": [{
     "room1": {
@@ -127,7 +127,7 @@
   }, {
     "room8": {
       "alias": "Exit gate",
-      "description": "You are at the exit gates!! You finally made it!! Thanks for playing Super Maze",
+      "description": "You are at the exit gates!! You finally made it!! Thanks for playing MazeBot",
       "contextualHelp": "",
       "actions": null,
       "isExitRoom" : "true",
