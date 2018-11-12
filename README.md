@@ -22,4 +22,5 @@ A Discord bot that uses commands to control a text based rpg game.
 * Contribute to this bot by adding more rooms into the game data.
 * You can help with this at any time by editing the [game_data.json](tbg/game_data.json) file.
 * Then, create a pull request and await my approval or for me to request changes.
+* Check out the [Maze Viewer](https://htmlpreview.github.io/?https://github.com/EthanThatOneKid/MazeBot/blob/master/maze-viewer/index.html) to see the current maze.
 * Thank you in advance!!
