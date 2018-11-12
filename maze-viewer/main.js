@@ -8,7 +8,8 @@ const cy_els = [];
   game_data = await response.json();
   for (let room_data of game_data.rooms) {
     const [id, room] = Object.entries(room_data)[0];
-    cy_els.push({data: {id}});
+    const {alias} = room;
+    cy_els.push({data: {id, alias}});
     for (let exit of Object.values(room.exits)) {
       if (exit == -1) continue;
       cy_els.push({
@@ -24,7 +25,7 @@ const cy_els = [];
     container: document.querySelector("#cy-container"),
     elements: cy_els,
     style: [ // the stylesheet for the graph
-      {selector: 'node', style: {'background-color': '#666', 'label': 'data(id)'}},
+      {selector: 'node', style: {'background-color': '#666', 'label': 'data(alias)'}},
       {selector: 'edge', style: {'width': 3, 'line-color': '#ccc', 'target-arrow-color': '#ccc', 'target-arrow-shape': 'triangle'}}
     ],
     layout: {name: 'grid', rows: 1}
