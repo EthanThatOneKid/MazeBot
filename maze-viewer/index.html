@@ -3,14 +3,25 @@
 <head>
 
   <title>MazeBot - Maze Viewer</title>
-  <script src="cytoscape.js"></script>
+  <script src="../node_modules/cytoscape/dist/cytoscape.js"></script>
+
+  <style>
+    #cy-container {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0px;
+      left: 0px;
+    }
+  </style>
 
 </head>
 <body>
 
   <h1>MazeBot - Maze Viewer</h1>
+  <p>Drag to reveal more</p>
 
-  <div id="canvas-container"></div>
+  <div id="cy-container"></div>
 
   <script src="main.js"></script>
 
