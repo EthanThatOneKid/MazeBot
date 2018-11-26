@@ -218,7 +218,7 @@
     "room13": {
       "alias": "Dune",
       "description": "The soil becomes sifting sand as you enter a desert biome beyond the mountain.",
-      "contextualHelp": "You notice a corroding wooden sign staked into the sand. It reads:\n+---------------------------------------------------+\n| Do not get trapped by the eternally-flowing sand! |\n|        Time beckons like the howling wind!        |\n+---------------------------------------------------+",
+      "contextualHelp": "You notice a corroding wooden sign staked into the sand. It reads:\n+-------------------------------------------------------+\n| Do not get trapped by the eternally-flowing sand! |\n|          Time beckons like the howling wind!          |\n+-------------------------------------------------------+",
       "actions": null,
       "exits": {
         "north": "room12",
