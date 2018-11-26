@@ -102,7 +102,7 @@
         "north": "room1",
         "east": "room7",
         "south": "room4",
-        "west": "room8"
+        "west": "-1"
       },
       "objects": null,
       "enemies": null
@@ -224,7 +224,7 @@
         "north": "room12",
         "east": "-1",
         "south": "-1",
-        "west": "-1"
+        "west": "room8"
       },
       "objects": null,
       "enemies": null
