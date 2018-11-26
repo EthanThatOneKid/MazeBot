@@ -7,8 +7,8 @@ A Discord bot that uses commands to control a text based rpg game.
 ## [😊 Add MazeBot to Your Server 😊](https://discordapp.com/oauth2/authorize?client_id=510952110960017412&scope=bot&permissions=0.)
 
 ## Bot Commands
-* `!START_MAZE`: Begins a new instance of the game. Clears any current game.
-* `!END_MAZE`: Ends the current game.
+* `!start maze`: Begins a new instance of the game. Clears any current game.
+* `!end maze`: Ends the current game.
 * `!info`: Prints any contextual help.
 * `!inventory`: Prints a list of items currently in the inventory.
 * `!score`: Prints the current score.
